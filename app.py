@@ -139,9 +139,13 @@ if st.button("🔍 Predict House Price"):
     
     # Ensure the order of columns matches the training data 'X'
     # The exact column order might be crucial for some models
-    final_input_df = input_df[feature_names].astype(float) # Cast boolean to float (0.0/1.0)
+    # Match model features dynamically and prevent feature name validation errors
+if hasattr(model, "feature_names_in_"):
+    final_input_df = input_df.reindex(columns=model.feature_names_in_, fill_value=0).astype(float)
+else:
+    final_input_df = input_df[feature_names].astype(float)
 
-    prediction = model.predict(final_input_df)[0]
+prediction = model.predict(final_input_df.values)[0]
 
     st.divider()
 
