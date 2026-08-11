@@ -39,7 +39,7 @@ st.markdown('''
 
 with st.sidebar:
     st.image(
-        "https://cdn-icons-png.flaticon.com/512/2940/2940798.png", # House icon
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1000&auto=format&fit=crop", # House icon
         width=150
     )    
 
