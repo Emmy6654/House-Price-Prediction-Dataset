@@ -37,11 +37,11 @@ st.markdown('''
 
 #SIDEBAR
 
-with st.sidebar:
-  st.image(
-    "https://cdn-icons-png.flaticon.com/512/2940/2940798.png", # House icon
-    width=150
-)
+ with st.sidebar:
+     st.image(
+        "https://cdn-icons-png.flaticon.com/512/2940/2940798.png", # House icon
+        width=150
+    )    
 
     st.title("🧮 Project Overview")
 
