@@ -39,7 +39,7 @@ st.markdown('''
 
 with st.sidebar:
     st.image(
-        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1000&auto=format&fit=crop", # House icon
+        "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg", # House icon
         width=150
     )    
 
