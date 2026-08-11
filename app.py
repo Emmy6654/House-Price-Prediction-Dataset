@@ -132,20 +132,17 @@ with col2:
 
 # PREDICTION
 
-if st.button("🔍 Predict House Price"):    
-    # Create a DataFrame from the input dictionary, ensuring all model features are present
-    # and in the correct order, with default values for any unselected OHE features.
+if st.button("🔍 Predict House Price"):
+    # Create a DataFrame from the input dictionary
     input_df = pd.DataFrame([input_values])
-    
-    # Ensure the order of columns matches the training data 'X'
-    # The exact column order might be crucial for some models
-    # Match model features dynamically and prevent feature name validation errors
-if hasattr(model, "feature_names_in_"):
-    final_input_df = input_df.reindex(columns=model.feature_names_in_, fill_value=0).astype(float)
-else:
-    final_input_df = input_df[feature_names].astype(float)
 
-prediction = model.predict(final_input_df.values)[0]
+    # Match model features dynamically and prevent feature name validation errors
+    if hasattr(model, "feature_names_in_"):
+        final_input_df = input_df.reindex(columns=model.feature_names_in_, fill_value=0).astype(float)
+    else:
+        final_input_df = input_df[feature_names].astype(float)
+
+    prediction = model.predict(final_input_df.values)[0]
 
     st.divider()
 
