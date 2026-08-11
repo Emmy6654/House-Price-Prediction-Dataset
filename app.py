@@ -39,9 +39,9 @@ st.markdown('''
 
 with st.sidebar:
     st.image(
-        "https://cdn-icons-png.flaticon.com/512/2940/2940798.png", # House icon
-        width=150
-    )
+    "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1000&auto=format&fit=crop",
+    use_container_width=True
+)
 
     st.title("🧮 Project Overview")
 
